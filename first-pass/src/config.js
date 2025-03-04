@@ -2,6 +2,7 @@ const createKnexClient = require("./knex-client");
 const createHomeApp = require("./app/home");
 
 function createConfig({ env }) {
+  console.log(env);
   const db = createKnexClient({
     connectionString: env.databaseUrl,
   });

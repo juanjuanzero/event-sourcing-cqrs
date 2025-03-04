@@ -1,4 +1,4 @@
-const camelCaseKeys = require("camelcase-keys");
+// import camelCaseKeys from "camelcase-keys";
 const express = require("express");
 
 function createHandlers({ queries }) {
@@ -29,3 +29,5 @@ function createHome({ db }) {
   router.route("/").get(handlers.home);
   return { handlers, queries, router };
 }
+
+module.exports = createHome;
